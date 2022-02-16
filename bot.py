@@ -6,7 +6,6 @@ from telebot import types
 from threading import Thread
 from time import sleep
 from datetime import datetime
-from telegram import (InlineKeyboardButton, InlineKeyboardMarkup)
 
 
 now = datetime.now()
