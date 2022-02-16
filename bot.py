@@ -27,7 +27,7 @@ def welcome(message):
 
     markup.add(item1, item2)
 
-    bot.send_message (message.from_user.id, 'Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданые как ежедневник для Neewal!'.format(message.from_user, bot.get_me()),
+    bot.send_message (message.from_user.id, 'Добро пожаловать, Человек!\nЯ - <b>{1.first_name}</b>, бот созданые как ежедневник для Neewal!'.format(message.from_user, bot.get_me()),
         parse_mode='html', reply_markup=markup)
     print("Сообщение 'welcome' отправлено!")
 
@@ -40,7 +40,8 @@ def callback_inline(call):
             elif call.data == 'natural':
                 bot.send_message(call.message.chat.id, 'БЫВАЕТ(')
 
-            bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id,)
+            bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="Добро пожаловать, Человек!\nЯ - <b>Олег</b>, бот созданые как ежедневник для Neewal!",
+                parse_mode='html', reply_markup=None)
     except Exception as e:
             print(repr(e))
 
